@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
 const complaintSchema = new mongoose.Schema({
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+  },
   title: String,
   description: String,
   location: String,
